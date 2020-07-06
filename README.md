@@ -15,7 +15,7 @@ The first six lines list meta data:
 1. Chinese title of the Sutra
 
 Note that line headers should be included as formatted by SAT as below (for example, "T0099_.02.0206a14:").
-Paragraph ending are marked with "//" and segment endings are marked with "/".
+Paragraph endings are marked with "//" and segment endings are marked with "/". The last segment of a paragraph and the last paragraph of a text should not be marked.
 Textual variants are appended to the end of the segment in which they occur and placed inside square brackets ("[]").
 The formatting of variant readings is according to Bilara standards.
 ```
