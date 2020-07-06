@@ -1,6 +1,8 @@
 # BilaraDataCreator
 
-This script was created to automate the generation of Bilara JSON data files for SuttaCentral's Bilara project. Two input text files are required to create the five data file types possible (root, reference, variant, html, and translation). This ConsoleApp is designed to handle Taisho primary texts as published at [SAT 2018 DB](https://21dzk.l.u-tokyo.ac.jp/SAT2018/master30.php?lang=en) and English translations saved as plain text. Those files are lightly marked up to provide meta data, paragraph and segment breaks, and textual variant readings.
+This script was created to automate the generation of Bilara JSON data files for SuttaCentral's Bilara project. 
+
+Two input text files are required to create the five data files that are possible for each individual sutra (root, reference, variant, html, and translation). The app is designed to handle Taisho primary texts as published at [SAT 2018 DB](https://21dzk.l.u-tokyo.ac.jp/SAT2018/master30.php?lang=en) and English translations saved as plain text. Those files are lightly marked up to provide meta data, paragraph and segment breaks, and textual variant readings.
 
 An example Taisho text is shown below to illustrate the markup conventions required by the application.
 
