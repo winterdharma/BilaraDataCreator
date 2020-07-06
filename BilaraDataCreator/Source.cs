@@ -55,7 +55,6 @@ namespace BilaraDataCreator
 
             textLines.RemoveRange(0, 6);
 
-
             string rawData = ConcatTextLines(textLines);
 
             string[] paraSplit = rawData.Split(new string[] { "//" }, StringSplitOptions.RemoveEmptyEntries);

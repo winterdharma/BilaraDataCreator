@@ -12,14 +12,14 @@ namespace BilaraDataCreator
         {
             string workDir = @"C:\Users\cdpat\Desktop\dev\bilara-workspace\";
             string inputSource = workDir + "T99_803.txt";
-            //string inputTrans = "someEnglishFile.txt";
+            string inputTrans = workDir + "T99_803_eng.txt";
             string outputDir = workDir + @"output\";
 
             Source source = new Source(inputSource, outputDir);
-            //Translation trans = new Translation(inputTrans, outputDir);
+            Translation trans = new Translation(inputTrans, outputDir);
 
             source.WriteBilaraFiles();
-            //trans.WriteBilaraFiles();
+            trans.WriteBilaraFiles();
         }
     }
 }
