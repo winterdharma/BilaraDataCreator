@@ -1,0 +1,14 @@
+C:\Users\cdpat\Desktop\dev\BilaraDataCreator\BilaraDataCreator\bin\Debug\BilaraDataCreator.exe.config
+C:\Users\cdpat\Desktop\dev\BilaraDataCreator\BilaraDataCreator\bin\Debug\BilaraDataCreator.exe
+C:\Users\cdpat\Desktop\dev\BilaraDataCreator\BilaraDataCreator\bin\Debug\BilaraDataCreator.pdb
+C:\Users\cdpat\Desktop\dev\BilaraDataCreator\BilaraDataCreator\bin\Debug\Utilities.dll
+C:\Users\cdpat\Desktop\dev\BilaraDataCreator\BilaraDataCreator\bin\Debug\MySqlConnector.dll
+C:\Users\cdpat\Desktop\dev\BilaraDataCreator\BilaraDataCreator\bin\Debug\System.Buffers.dll
+C:\Users\cdpat\Desktop\dev\BilaraDataCreator\BilaraDataCreator\bin\Debug\Utilities.pdb
+C:\Users\cdpat\Desktop\dev\BilaraDataCreator\BilaraDataCreator\bin\Debug\Utilities.dll.config
+C:\Users\cdpat\Desktop\dev\BilaraDataCreator\BilaraDataCreator\bin\Debug\MySqlConnector.xml
+C:\Users\cdpat\Desktop\dev\BilaraDataCreator\BilaraDataCreator\obj\Debug\BilaraDataCreator.csprojAssemblyReference.cache
+C:\Users\cdpat\Desktop\dev\BilaraDataCreator\BilaraDataCreator\obj\Debug\BilaraDataCreator.csproj.CoreCompileInputs.cache
+C:\Users\cdpat\Desktop\dev\BilaraDataCreator\BilaraDataCreator\obj\Debug\BilaraDataCreator.csproj.CopyComplete
+C:\Users\cdpat\Desktop\dev\BilaraDataCreator\BilaraDataCreator\obj\Debug\BilaraDataCreator.exe
+C:\Users\cdpat\Desktop\dev\BilaraDataCreator\BilaraDataCreator\obj\Debug\BilaraDataCreator.pdb

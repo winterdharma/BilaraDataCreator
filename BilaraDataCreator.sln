@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30225.117
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BilaraDataCreator", "BilaraDataCreator\BilaraDataCreator.csproj", "{472D9857-8040-4728-918E-74A9A0325C02}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utilities", "..\Utilities\Utilities.csproj", "{DE3E99B1-50B2-4F70-8B36-35BBC4B32FEB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{472D9857-8040-4728-918E-74A9A0325C02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{472D9857-8040-4728-918E-74A9A0325C02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{472D9857-8040-4728-918E-74A9A0325C02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{472D9857-8040-4728-918E-74A9A0325C02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE3E99B1-50B2-4F70-8B36-35BBC4B32FEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE3E99B1-50B2-4F70-8B36-35BBC4B32FEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE3E99B1-50B2-4F70-8B36-35BBC4B32FEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE3E99B1-50B2-4F70-8B36-35BBC4B32FEB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7854113B-2995-4775-9099-1BCE2FB7B20B}
+	EndGlobalSection
+EndGlobal
