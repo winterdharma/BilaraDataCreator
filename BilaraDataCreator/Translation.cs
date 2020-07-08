@@ -57,9 +57,13 @@ namespace BilaraDataCreator
                     segmentNo++;
                     string content = segment;
                     string segmentRef = agamaRef + ":" + paraNo + "." + segmentNo;
-                    if (segmentSplit.Length == 1)
+                    if (paraNo == textLines.Count && segmentSplit.Length == 1)
+                        output[htmlKey].Add(segmentRef, "<p>{}</p></article>");
+                    else if (paraNo == textLines.Count && segmentNo == segmentSplit.Length)
+                        output[htmlKey].Add(segmentRef, "{}</p></article");
+                    else if (segmentSplit.Length == 1)
                         output[htmlKey].Add(segmentRef, "<p>{}</p>");
-                    else if(segmentNo == 1)
+                    else if (segmentNo == 1)
                         output[htmlKey].Add(segmentRef, "<p>{}");
                     else if (segmentNo == segmentSplit.Length)
                         output[htmlKey].Add(segmentRef, "{}</p>");
