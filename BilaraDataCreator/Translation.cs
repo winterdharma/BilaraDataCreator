@@ -10,15 +10,13 @@ namespace BilaraDataCreator
     internal class Translation
     {
         private string inputFilePath;
-        private string outputDirPath;
         private Dictionary<string, Dictionary<string, string>> datasets;
         private const string transName = "_translation-en-patton.json";
         private const string htmlName = "_html.json";
 
-        public Translation(string input, string output)
+        public Translation(string input)
         {
             inputFilePath = input;
-            outputDirPath = output;
 
             var textLines = LoadFiles.TextFile(inputFilePath);
             datasets = ParseInputData(textLines);
@@ -80,11 +78,11 @@ namespace BilaraDataCreator
             return output;
         }
 
-        internal void WriteBilaraFiles()
+        internal void WriteBilaraFiles(string outputDir)
         {
             foreach (KeyValuePair<string, Dictionary<string, string>> file in datasets)
             {
-                string filename = outputDirPath + file.Key;
+                string filename = outputDir + file.Key;
                 var lines = new List<string>();
                 lines.Add("{");
                 foreach (KeyValuePair<string, string> line in file.Value)

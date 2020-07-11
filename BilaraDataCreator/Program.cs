@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.IO;
 
 namespace BilaraDataCreator
 {
@@ -10,16 +7,36 @@ namespace BilaraDataCreator
     {
         static void Main(string[] args)
         {
+            // define default directories 
+            // (ideally this should be user-defined parameter - future feature)
             string workDir = @"C:\Users\cdpat\Desktop\dev\bilara-workspace\";
-            string inputSource = workDir + "T99_803.txt";
-            string inputTrans = workDir + "T99_803_eng.txt";
             string outputDir = workDir + @"output\";
 
-            Source source = new Source(inputSource, outputDir);
-            Translation trans = new Translation(inputTrans, outputDir);
+            // fetch the input files present in work directory
+            string[] files = Directory.GetFiles(workDir);
 
-            source.WriteBilaraFiles();
-            trans.WriteBilaraFiles();
+            // initialize data processors for Chinese texts and English translations
+            List<Source> sourceFiles = new List<Source>();
+            List<Translation> transFiles = new List<Translation>();
+
+            foreach(string file in files)
+            {
+                if (file.Contains("eng"))
+                    transFiles.Add(new Translation(file));
+                else
+                    sourceFiles.Add(new Source(file));
+            }
+
+            // write the output files
+            foreach(Source source in sourceFiles)
+            {
+                source.WriteBilaraFiles(outputDir);
+            }
+
+            foreach(Translation trans in transFiles)
+            {
+                trans.WriteBilaraFiles(outputDir);
+            }
         }
     }
 }

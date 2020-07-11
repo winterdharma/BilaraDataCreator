@@ -11,16 +11,14 @@ namespace BilaraDataCreator
     internal class Source
     {
         private string inputFilePath;
-        private string outputDirPath;
         private Dictionary<string, Dictionary<string, string>> datasets;
         private string taishoRef = "";
         private const string refName = "_reference.json";
         private const string varName = "_variant-lzh-sct.json";
         private const string rootName = "_root-lzh-sct.json";
-        public Source(string input, string output)
+        public Source(string input)
         {
             inputFilePath = input;
-            outputDirPath = output;
 
             var textLines = LoadFiles.TextFile(inputFilePath);
             datasets = ParseInputData(textLines);
@@ -100,13 +98,13 @@ namespace BilaraDataCreator
         {
             content = str;
             string refs = "";
-
-            if(str.Contains("T"))
+            content = content.Replace("CBETA", "cbeta");
+            if (str.Contains("_."))
             {
                 string[] split = str.Split(new string[] { " " }, StringSplitOptions.RemoveEmptyEntries);
                 foreach(string part in split)
                 {
-                    if(part.Contains("T"))
+                    if(part.Contains("_."))
                     {
                         refs += taishoRef + "." + GetPageColLineRef(part) + ", ";
                     }
@@ -114,17 +112,17 @@ namespace BilaraDataCreator
                 if (refs.Length > 0)
                     refs = refs.Truncate(2);
             }
-            
-            content = str.Scrub('T', ' ', 19);
+
+            content = content.Scrub('T', ' ', 19);
             
             return refs;
         }
 
-        internal void WriteBilaraFiles()
+        internal void WriteBilaraFiles(string outputDir)
         {
             foreach(KeyValuePair<string, Dictionary<string, string>> file in datasets)
             {
-                string filename = outputDirPath + file.Key;
+                string filename = outputDir + file.Key;
                 var lines = new List<string>();
                 lines.Add("{");
                 foreach(KeyValuePair<string, string> line in file.Value)
