@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 
 namespace BilaraDataCreator
@@ -12,14 +13,19 @@ namespace BilaraDataCreator
             string workDir = @"C:\Users\cdpat\Desktop\dev\bilara-workspace\";
             string outputDir = workDir + @"output\";
 
-            // fetch the input files present in work directory
-            string[] files = Directory.GetFiles(workDir);
+            // fetch the input files and initialize data processors
+            var dataCollection = InitializeDataProcessors(Directory.GetFiles(workDir));
 
-            // initialize data processors for Chinese texts and English translations
+            WriteBilaraFiles(dataCollection, outputDir);
+        }
+
+        #region Helper Methods
+        static Tuple<List<Source>, List<Translation>> InitializeDataProcessors(string[] filePaths)
+        {
             List<Source> sourceFiles = new List<Source>();
             List<Translation> transFiles = new List<Translation>();
-
-            foreach(string file in files)
+            
+            foreach (string file in filePaths)
             {
                 if (file.Contains("eng"))
                     transFiles.Add(new Translation(file));
@@ -27,16 +33,21 @@ namespace BilaraDataCreator
                     sourceFiles.Add(new Source(file));
             }
 
-            // write the output files
-            foreach(Source source in sourceFiles)
+            return new Tuple<List<Source>, List<Translation>>(sourceFiles, transFiles);
+        }
+
+        private static void WriteBilaraFiles(Tuple<List<Source>, List<Translation>> dataCollection, string outputDir)
+        {
+            foreach (Source source in dataCollection.Item1)
             {
                 source.WriteBilaraFiles(outputDir);
             }
 
-            foreach(Translation trans in transFiles)
+            foreach (Translation trans in dataCollection.Item2)
             {
                 trans.WriteBilaraFiles(outputDir);
             }
         }
+        #endregion
     }
 }
