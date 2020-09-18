@@ -58,7 +58,7 @@ namespace BilaraDataCreator
                     if (paraNo == textLines.Count && segmentSplit.Length == 1)
                         output[htmlKey].Add(segmentRef, "<p>{}</p></article>");
                     else if (paraNo == textLines.Count && segmentNo == segmentSplit.Length)
-                        output[htmlKey].Add(segmentRef, "{}</p></article");
+                        output[htmlKey].Add(segmentRef, "{}</p></article>");
                     else if (segmentSplit.Length == 1)
                         output[htmlKey].Add(segmentRef, "<p>{}</p>");
                     else if (segmentNo == 1)
